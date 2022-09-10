@@ -21,8 +21,8 @@ export default function Home() {
       {/* Main Section */}
       <main className='flex flex-col items-center justify-center w-full flex-l px-20 text-center'>
         {/* section_left */}
-        <div className='bg-white text-black rounded-2xl shadow-2xl flex w-2/3 max-w-4xl '> 
-          <div className='w-3/5 p-5 '>
+        <div className='bg-blue-500  text-black rounded-3xl shadow-2xl flex flex-col md:flex-row justify-center items-center  w-2/3 max-w-4xl '> 
+          <div className='md:w-3/5 md:p-20 md:rounded-l-3xl rounded-t-3xl md:rounded-r-none p-10 bg-white '>
             <div className='text-left font-bold'><span className='text-blue-500 '>VTOP</span><span className=''>&nbsp;Bhopal</span></div>
             <div className='pt-10 pb-8'>
             <h2 className='text-4xl font-bold mb-1 mt-2 text-blue-500'> Sign To An Account</h2>
@@ -59,14 +59,8 @@ export default function Home() {
             </div>
           </div> 
           {/* section_right */}
-          <div className='w-2/5 bg-blue-500 rounded-tr-2xl rounded-br-2xl py-36 px-12 text-white'>
-          <Lottie className='mb-4' animationData={wampus} loop={true} />
-            {/* <h2 className='text-4xl font-bold mb-1'> Hello, Future!</h2>
-            <div className='border-2 w-10 border-white inline-block'></div>
-            <div className='mb-10 text-base'> Fill up personal information and start journey with us. </div>
-              <div className=' border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-blue-500 text-md'>
-              <Link href='/register'>Sign Up</Link>
-            </div> */}
+          <div className='w-full md:w-2/5 sm:h-full bg-blue-500 rounded-tr-2xl md:rounded-br-2xl rounded-2xl py-36 px-12  text-white'>
+          <Lottie className='md:mb-4' animationData={wampus} loop={true} />
           </div>
           </div>
       </main>
