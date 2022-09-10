@@ -4,7 +4,7 @@ import Navbar from "../components/navbar.js"
 import Profile_teacher from "../components/profile_teacher.js"
 
 
-export default function t_s() { 
+export default function teacher_profile_dashboard() { 
   return (
     
     <div className='flex flex-col bg-white text-black'>

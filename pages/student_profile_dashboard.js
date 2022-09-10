@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import React from "react";
 import Navbar from "../components/navbar.js"
-import Profile_teacher from "../components/profile_student.js"
+import Profile_student from "../components/profile_student.js"
 
 
-export default function t_s() { 
+export default function student_profile_dashboard() { 
   return (
     
     <div className='flex flex-col bg-white text-black'>
@@ -15,7 +15,7 @@ export default function t_s() {
       </Head>
       <div className='flex'>
       <Navbar/>
-      <Profile_teacher/>
+      <Profile_student/>
       </div>
     </div>
   )
