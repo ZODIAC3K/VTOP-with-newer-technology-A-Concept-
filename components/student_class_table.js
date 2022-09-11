@@ -13,7 +13,7 @@ export default function Student_class_table({children}) {
                     </div>
                     <div className="font-normal flex flex-col pt-2">
                         <div className=" flex flex-col justify-center items-center">
-                            <a href='#'><label className=" font-semibold text-lg cursor-pointer text-blue-500">Download</label></a>
+                            <a href='./student_table.png' download><label className=" font-semibold text-lg cursor-pointer text-blue-500">Download</label></a>
                         </div>
                     </div>
                     <div className="flex justify-center">
@@ -31,60 +31,60 @@ export default function Student_class_table({children}) {
                                 <th className="py-3 px-8">&nbsp;</th>
                             </tr>
                         </thead>
-                        <thead>
+                        <thead className="">
                             <tr className="cursor-pointer duration-300">
                                 <th className="py-4 px-8 font-normal">Mon</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
+                                <th className="py-4 px-8 font-normal bg-red-500 text-white italic">CSE2003 &nbsp; A110</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal bg-yellow-400 text-white italic">CAO4001 &nbsp; AB303</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal bg-violet-400 text-white italic">MAT3001 &nbsp; AB412</th>
+                                <th className="py-4 px-8 font-normal bg-green-400 text-white italic">HUM2001 &nbsp; AB502</th>
+                                <th className="py-4 px-8 font-normal">---</th>
                                 <th className="py-4 px-8 font-normal">&nbsp;</th>
                             </tr>
                             <tr className="cursor-pointer duration-300">
                                 <th className="py-4 px-8 font-normal">Tue</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal bg-violet-400 text-white italic">MAT3001 &nbsp; AB412</th>
+                                <th className="py-4 px-8 font-normal bg-blue-400 text-white italic">ENG1001 &nbsp; AB330</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal">---</th>
                                 <th className="py-4 px-8 font-normal">&nbsp;</th>
                             </tr>
                             <tr className="cursor-pointer duration-300">
                                 <th className="py-4 px-8 font-normal">Wed</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
+                                <th className="py-4 px-8 font-normal bg-red-500 text-white italic">CSE2003 &nbsp; <span className="text-sm">A110</span></th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal bg-yellow-400 text-white italic">CAO4001 &nbsp; AB303</th>
+                                <th className="py-4 px-8 font-normal bg-blue-400 text-white italic">ENG1001 &nbsp; AB330</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal bg-green-400 text-white italic">HUM2001 &nbsp; AB502</th>
+                                <th className="py-4 px-8 font-normal">---</th>
                                 <th className="py-4 px-8 font-normal">&nbsp;</th>
                             </tr>
                             <tr className="cursor-pointer duration-300">
                                 <th className="py-4 px-8 font-normal">Thu</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal bg-violet-400 text-white italic">MAT3001 &nbsp; AB412</th>
+                                <th className="py-4 px-8 font-normal bg-blue-400 text-white italic">ENG1001 &nbsp; AB330</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal bg-green-400 text-white italic">HUM2001 &nbsp; AB502</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal">---</th>
                                 <th className="py-4 px-8 font-normal">&nbsp;</th>
                             </tr>
                             <tr className="cursor-pointer duration-300">
                                 <th className="py-4 px-8 font-normal">Fri</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
-                                <th className="py-4 px-8 font-normal">&nbsp;</th>
+                                <th className="py-4 px-8 font-normal bg-red-500 text-white italic">CSE2003 &nbsp; A110</th>
+                                <th className="py-4 px-8 font-normal">----</th>
+                                <th className="py-4 px-8 font-normal bg-yellow-400 text-white italic">CAO4001 &nbsp; AB303</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal">---</th>
+                                <th className="py-4 px-8 font-normal">---</th>
                                 <th className="py-4 px-8 font-normal">&nbsp;</th>
                             </tr>
                         </thead>
