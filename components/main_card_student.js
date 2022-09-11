@@ -1,6 +1,21 @@
 import Image from "next/image";
 
 export default function Main_card(props) {
+    
+    // just pass the required attribute as a string here
+    function putData(field) {
+        try {
+            const text = props.data[0][field]
+            return (
+                <p>{text}</p>
+            )
+        } catch (err) {
+            return(
+                <p>Loading...</p>
+            )    
+        }
+    }
+
     return (
         <div className="w-full flex flex-col xl:flex-row justify-center items-center">
             <div className="w-80 p-4 h-max shadow-md m-10 rounded-sm hover:shadow-xl ease-out-in">
@@ -14,7 +29,7 @@ export default function Main_card(props) {
                             <div className="border-2 border-blue-500 rounded-full flex justify-center p-1">
                                 <Image className="rounded-full" src={props.image} width={80} height={80} ></Image>
                             </div>
-                            <label className="text-lg my-4 italic">Name</label>
+                            <label className="text-lg my-4 italic">{putData('name')}</label>
                         </div>
                         <label className="text-md">Email: &nbsp; <span>XXXXX</span></label>
                         <label className="text-md mt-1">Contact: &nbsp; <span>XXXXX</span></label>

@@ -2,9 +2,19 @@ import { BiUser } from "react-icons/bi";
 import { VscArrowSmallLeft } from "react-icons/vsc";
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineProfile,AiOutlineBook,AiFillEdit,AiOutlineFileText,AiOutlineInfoCircle,AiOutlineRocket } from "react-icons/ai";
+import { useRouter } from "next/router";
+import cookieCutter from 'cookie-cutter'
 
 
 export default function Navbar({children}) {
+    const router = useRouter()
+
+    const logout = (event) =>{
+        cookieCutter.set('user_id','',{ expires: new Date(0)})
+        cookieCutter.set('user_details','',{ expires: new Date(0)})
+        router.push('/')
+    }
+
     return (
         <div className="w-72 bg-blue-500 rounded-r-md h-screen shadow-2xl">
             <div className="px-6 pt-8">
@@ -12,7 +22,7 @@ export default function Navbar({children}) {
                     <div className="flex">
                         <div className="mt-1.5">
                             <a href="#">
-                            <BiUser className="text-3xl text-white border-2 border-white rounded-full"/>
+                                <BiUser className="text-3xl text-white border-2 border-white rounded-full"/>
                             </a>
                         </div>
                         <div className="text-white text-sm mx-4">
@@ -25,9 +35,9 @@ export default function Navbar({children}) {
                         </div>
                     </div>
                     <div className="mt-2">
-                        <a href="/">
+                        <button onClick={logout}>
                         <VscArrowSmallLeft className="text-2xl text-white bg-blue-400 rounded-md"/>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
