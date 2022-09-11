@@ -4,11 +4,12 @@ import { BsSearch } from "react-icons/bs";
 import { AiOutlineProfile,AiOutlineBook,AiFillEdit,AiOutlineFileText,AiOutlineInfoCircle,AiOutlineRocket } from "react-icons/ai";
 import { useRouter } from "next/router";
 import cookieCutter from 'cookie-cutter'
+import Link from "next/link";
 
 
-export default function Navbar({children}) {
+export default function Navbar(props) {
     const router = useRouter()
-
+    console.log(props)
     const logout = (event) =>{
         cookieCutter.set('user_id','',{ expires: new Date(0)})
         cookieCutter.set('user_details','',{ expires: new Date(0)})
@@ -21,7 +22,7 @@ export default function Navbar({children}) {
                 <div className="flex item-center justify-between">
                     <div className="flex">
                         <div className="mt-1.5">
-                            <a href="#">
+                            <a href="/student_dashboard">
                                 <BiUser className="text-3xl text-white border-2 border-white rounded-full"/>
                             </a>
                         </div>
@@ -56,13 +57,13 @@ export default function Navbar({children}) {
             </div>
             <div className="pr-6 pt-4 ">
                 <ul className="">
-                    <a href="#" className="my-1 pr-4 pl-8 py-2  inline-block w-full rounded-r-md font-semibold hover:bg-white hover:text-blue-500 text-white">
+                    <a href="/student_profile_dashboard" className="my-1 pr-4 pl-8 py-2  inline-block w-full rounded-r-md font-semibold hover:bg-white hover:text-blue-500 text-white">
                         <li className="flex flex-row items-center w-full">
                             <AiOutlineProfile className="pl-4 text-4xl"/>
                             <span className="ml-2">My Profile</span>
                         </li>
                     </a>
-                    <a href="#" className="my-1 pr-4 pl-8 py-2  inline-block w-full rounded-r-md font-semibold hover:bg-white hover:text-blue-500 text-white">
+                    <a href="/student_academics_dashboard" className="my-1 pr-4 pl-8 py-2  inline-block w-full rounded-r-md font-semibold hover:bg-white hover:text-blue-500 text-white">
                         <li className=" flex flex-row items-center w-full">
                             <AiOutlineBook className=" pl-4 text-4xl"/>
                             <span className="ml-2">Academics</span>

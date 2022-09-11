@@ -1,13 +1,17 @@
 import Image from "next/image";
+import cookieCutter from 'cookie-cutter'
+import {useState,useEffect} from 'react'
+import { useRouter } from "next/router";
 
 export default function Main_card(props) {
-    
+    const [dataResponse,setdataResponse] = useState([])
+    const router = useRouter()
     // just pass the required attribute as a string here
     function putData(field) {
         try {
-            const text = props.data[0][field]
+            const text = props.data[0][field] || dataResponse[0][field]
             return (
-                <p>{text}</p>
+                text
             )
         } catch (err) {
             return(
@@ -15,6 +19,46 @@ export default function Main_card(props) {
             )    
         }
     }
+    useEffect(() => {
+        async function idCookie(){
+          const user = JSON.parse(cookieCutter.get('user_details'))
+          const query = `SELECT uid FROM users WHERE email = '${user.email}' AND password = '${user.password}';`
+
+          const endpoint = '/api/getdata'
+          const options = {
+              method: "post",
+              body : query
+          }
+          const response = await fetch(endpoint, options);
+          const res = await response.json()
+
+          setTimeout(()=>cookieCutter.set('user',JSON.stringify(res)),1000)
+        }
+        async function getPageData() {
+          if(cookieCutter.get('user_details')){
+            try {
+                const user = JSON.parse(cookieCutter.get('user'))
+              const query = `SELECT u.uid, u.name, u.email, u.teleNo FROM vtop.users AS u WHERE u.uid = "${user[0].uid}";`
+              const endpoint = '/api/getdata'
+              const options = {
+                  method: "post",
+                  body : query
+              }
+              const response = await fetch(endpoint, options);
+              const res = await response.json()
+              setdataResponse(await res)
+            } catch (err) {
+              console.log(err.message)
+              return
+            }
+            
+          } else {
+            router.push('/')
+          }
+        }
+        idCookie()
+        setTimeout(()=>{getPageData()}, 4000)
+    },[])
 
     return (
         <div className="w-full flex flex-col xl:flex-row justify-center items-center">
@@ -29,11 +73,11 @@ export default function Main_card(props) {
                             <div className="border-2 border-blue-500 rounded-full flex justify-center p-1">
                                 <Image className="rounded-full" src={props.image} width={80} height={80} ></Image>
                             </div>
-                            <label className="text-lg my-4 italic">{putData('name')}</label>
+                            <label className="text-lg my-4 italic">Preetam Suman</label>
                         </div>
-                        <label className="text-md">Email: &nbsp; <span>XXXXX</span></label>
-                        <label className="text-md mt-1">Contact: &nbsp; <span>XXXXX</span></label>
-                        <label className="text-md mt-1">About: &nbsp; <span>XXXXX</span></label>
+                        <label className="text-md">Email: &nbsp; <span>preetam.suman@vitbhopal.ac.in</span></label>
+                        <label className="text-md mt-1">Contact: &nbsp; <span>1234567890</span></label>
+                    
                     </div>
                 </div>
             </div>
@@ -48,11 +92,11 @@ export default function Main_card(props) {
                             <div className="border-2 border-blue-500 rounded-full flex justify-center p-1">
                                 <Image className="rounded-full" src={props.image} width={80} height={80} ></Image>
                             </div>
-                            <label className="text-lg my-4 italic">Name</label>
+                            <label className="text-lg my-4 italic">Ganeshan R</label>
                         </div>
-                        <label className="text-md">Email: &nbsp; <span>XXXXX</span></label>
-                        <label className="text-md mt-1">Contact: &nbsp; <span>XXXXX</span></label>
-                        <label className="text-md mt-1">About: &nbsp; <span>XXXXX</span></label>
+                        <label className="text-md">Email: &nbsp; <span>ganeshan.ganesh@vitbhopal.ac.in</span></label>
+                        <label className="text-md mt-1">Contact: &nbsp; <span>1234567890</span></label>
+                    
                     </div>
                 </div>
             </div>
@@ -67,11 +111,11 @@ export default function Main_card(props) {
                             <div className="border-2 border-blue-500 rounded-full flex justify-center p-1">
                                 <Image className="rounded-full" src={props.image} width={80} height={80} ></Image>
                             </div>
-                            <label className="text-lg my-4 italic">Name</label>
+                            <label className="text-lg my-4 italic">Poonkuntran</label>
                         </div>
-                        <label className="text-md">Email: &nbsp; <span>XXXXX</span></label>
-                        <label className="text-md mt-1">Contact: &nbsp; <span>XXXXX</span></label>
-                        <label className="text-md mt-1">About: &nbsp; <span>XXXXX</span></label>
+                        <label className="text-md">Email: &nbsp; <span>poonkuntran@vitbhopal.ac.in</span></label>
+                        <label className="text-md mt-1">Contact: &nbsp; <span>1234567890</span></label>
+                        
                     </div>
                 </div>
             </div>

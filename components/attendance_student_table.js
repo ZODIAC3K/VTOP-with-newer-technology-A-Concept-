@@ -22,13 +22,12 @@ export default function Attendance_student_table({children}) {
                     <div className="flex justify-center items-center mx-4">
                     <div>
                         <select name="subject" id="cars" className="text-blue-500 bg-white border-2 border-blue-500 rounded-md text-md outline-none p-4">
-                            <option value="subject 1">Subject 1</option>
-                            <option value="subject 2">Subject 2</option>
-                            <option value="subject 3">Subject 3</option>
-                            <option value="subject 4">Subject 4</option>
-                            <option value="subject 5">Subject 5</option>
-                            <option value="subject 6">Subject 6</option>
-                            <option value="subject 7">Subject 7</option>
+                            <option value="subject 1">CSE 2003</option>
+                            <option value="subject 2">MAT 3001</option>
+                            <option value="subject 3">ENG 1001</option>
+                            <option value="subject 4">HUM 2001</option>
+                            <option value="subject 5">CAO 1001</option>
+                           
                         </select>
                         </div>
                     </div>
@@ -43,20 +42,20 @@ export default function Attendance_student_table({children}) {
                         </thead>
                         <thead>
                             <tr className="cursor-pointer duration-300">
-                                <th className="py-4 px-8 font-normal">XX-XX-XX</th>
-                                <th className="py-4 px-8 font-normal">X</th>
+                                <th className="py-4 px-8 font-normal">12-5-22</th>
+                                <th className="py-4 px-8 font-normal">P</th>
                             </tr>
                             <tr className="cursor-pointer duration-300">
-                                <th className="py-4 px-8 font-normal">XX-XX-XX</th>
-                                <th className="py-4 px-8 font-normal">X</th>
+                                <th className="py-4 px-8 font-normal">14-5-22</th>
+                                <th className="py-4 px-8 font-normal">A</th>
                             </tr>
                             <tr className="cursor-pointer duration-300">
-                                <th className="py-4 px-8 font-normal">XX-XX-XX</th>
-                                <th className="py-4 px-8 font-normal">X</th>
+                                <th className="py-4 px-8 font-normal">16-5-22</th>
+                                <th className="py-4 px-8 font-normal">P</th>
                             </tr>
                             <tr className="cursor-pointer duration-300">
-                                <th className="py-4 px-8 font-normal">XX-XX-XX</th>
-                                <th className="py-4 px-8 font-normal">X</th>
+                                <th className="py-4 px-8 font-normal">18-5-22</th>
+                                <th className="py-4 px-8 font-normal">P</th>
                             </tr>
                         </thead>
                     </table> 

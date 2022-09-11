@@ -8,18 +8,22 @@ import { useRouter } from 'next/router.js';
 export default function student_dashboard() {
   const router = useRouter()
   const [dataResponse, setdataResponse] = useState([])
-
+  
+  function putData(field) {
+      try {
+        console.log(dataResponse[0])
+          const text = dataResponse[0][field]
+          return (
+              text
+          )
+      } catch (err) {
+          return   
+      }
+  }
     useEffect(() => {
-        function isPromise(p) {
-          if (typeof p === 'object' && typeof p.then === 'function') {
-            return true;
-          }
-        
-          return false;
-        }
         async function idCookie(){
           const user = JSON.parse(cookieCutter.get('user_details'))
-          const query = `SELECT * FROM users WHERE email = '${user.email}' AND password = '${user.password}';`
+          const query = `SELECT uid FROM users WHERE email = '${user.email}' AND password = '${user.password}';`
 
           const endpoint = '/api/getdata'
           const options = {
@@ -28,16 +32,14 @@ export default function student_dashboard() {
           }
           const response = await fetch(endpoint, options);
           const res = await response.json()
-          
-          while (isPromise(res[0]))
-          
-          cookieCutter.set('user',res[0])
+
+          setTimeout(()=>cookieCutter.set('user',JSON.stringify(res)),1000)
         }
         async function getPageData() {
           if(cookieCutter.get('user_details')){
             try {
               const user = JSON.parse(cookieCutter.get('user'))
-              const query = `SELECT * FROM users WHERE uid = '${user.uid}';`
+              const query = `SELECT u.uid, u.name, vi.proctorID, vi.programmeChairID, vi.deanID FROM vtop.users as u LEFT JOIN vtop.vitInfo AS vi ON u.uid = vi.uid WHERE u.uid = "${user[0].uid}";`
               const endpoint = '/api/getdata'
               const options = {
                   method: "post",
@@ -45,8 +47,9 @@ export default function student_dashboard() {
               }
               const response = await fetch(endpoint, options);
               const res = await response.json()
-              setdataResponse(res)
+              setdataResponse(await res)
             } catch (err) {
+              console.log(err.message)
               return
             }
             
@@ -54,10 +57,10 @@ export default function student_dashboard() {
             router.push('/')
           }
         }
-        idCookie();
-        setTimeout(()=>{getPageData()},2000); // quickfix with delay
+        idCookie()
+        setTimeout(()=>{getPageData()}, 4000)
     },[])
-  
+    
   return (
     <div className='flex flex-col min-h-screen bg-white text-black'>
       <Head>
@@ -66,8 +69,10 @@ export default function student_dashboard() {
         </title>
       </Head>
       <div className='flex'>
-        <Navbar/>
-        <Main_card_student data={dataResponse} image={'/xyz.png'}/>
+        {}
+        <Navbar isStudent={putData('sBool')}/>
+        <Main_card_student data={dataResponse} image={'/xyz.jpg'}/>
+        
       </div>
     </div>
   )

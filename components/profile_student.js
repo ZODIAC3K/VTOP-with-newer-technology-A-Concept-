@@ -12,10 +12,10 @@ export default function Profile_St(props) {
                     </div>
                     <div className="font-normal mt-1 flex flex-col p-2">
                             <div className="mt-2 flex flex-col">
-                                <label className="text-md">VTop:&nbsp; <span>XXXXX</span></label>
-                                <label className="text-md">Password:&nbsp; <span>XXXXX</span></label>
-                                <label className="text-md">Gmail:&nbsp; <span>XXXXX</span></label>
-                                <label className="text-md">Password:&nbsp; <span>XXXXX</span></label>
+                                <label className="text-md">VTop:&nbsp; <span>21BAI10333</span></label>
+                                <label className="text-md">Password:&nbsp; <span>{"Sk<9^C3L"}</span></label>
+                                <label className="text-md">Gmail:&nbsp; <span>divya.chakrabarti@gmail.com</span></label>
+                                <label className="text-md">Password:&nbsp; <span>{"Sk<9^C3L"}</span></label>
                             </div>
                         </div>
                 </div>
@@ -27,11 +27,10 @@ export default function Profile_St(props) {
                         </div>
                         <div className="font-normal mt-1 flex flex-col p-2">
                             <div className=" flex flex-col justify-center items-center">
-                                <label className="text-lg mb-2 italic">Bank:&nbsp; <span>XXXX</span></label>
+                                <label className="text-lg mb-2 italic">Bank:&nbsp; <span>Indian Bank</span></label>
                             </div>
-                            <label className="text-md ">Account No: &nbsp; <span>XXXXX</span></label>
-                            <label className="text-md ">Card No: &nbsp; <span>XXXXX</span></label>
-                            <label className="text-md ">Help: &nbsp; <span>XXXXX</span></label>
+                            <label className="text-md ">Account No: &nbsp; <span>123045</span></label>
+                            <label className="text-md ">Card No: &nbsp; <span>123995</span></label>
                         </div>
                         <div className="flex flex-col justify-center items-center">
                             <label className="text-md border-2 border-white text-white font-bold bg-blue-500 py-2 px-4  rounded-full hover:bg-white hover:text-black hover:border-2 hover:border-blue-500 ">Reveal Information</label>
@@ -46,8 +45,8 @@ export default function Profile_St(props) {
                                 <div className="w-6 h-1 mt-1 bg-blue-500"></div>
                             </div>
                             <div className="font-normal mt-1 flex flex-col p-2">
-                                <label className="text-md ">User Name: &nbsp; <span>XXXXX</span></label>
-                                <label className="text-md ">Password: &nbsp; <span>XXXXX</span></label>
+                                <label className="text-md ">User Name: &nbsp; <span>21BAI10333</span></label>
+                                <label className="text-md ">Password: &nbsp; <span>awrnip129</span></label>
                             </div>
                             <div className="flex flex-col justify-center items-center">
                                 <label className="text-md border-2 border-white text-white font-bold bg-blue-500 py-2 px-4  rounded-full hover:bg-white hover:text-black hover:border-2 hover:border-blue-500 ">Reveal Information</label>
@@ -73,15 +72,15 @@ export default function Profile_St(props) {
                         </thead>
                         <thead>
                             <tr className="cursor-pointer duration-300">
-                                <th className="py-4 px-8 font-normal">XX-XX-XX</th>
-                                <th className="py-4 px-8 font-normal">XXXXXX</th>
-                                <th className="py-4 px-8 font-normal">DD-MM-YY</th>
+                                <th className="py-4 px-8 font-normal">22-2-22</th>
+                                <th className="py-4 px-8 font-normal">Fluid Mechanics</th>
+                                <th className="py-4 px-8 font-normal">22-2-22</th>
                                 <th className="py-4 px-8 text-green-500">Returned</th>
                             </tr>
                             <tr className="cursor-pointer duration-300">
-                                <th className="py-4 px-8 font-normal">XX-XX-XX</th>
-                                <th className="py-4 px-8 font-normal">XXXXXX</th>
-                                <th className="py-4 px-8 font-normal">DD-MM-YY</th>
+                                <th className="py-4 px-8 font-normal">33-2-33</th>
+                                <th className="py-4 px-8 font-normal">Solid State of Matter</th>
+                                <th className="py-4 px-8 font-normal">22-2-22</th>
                                 <th className="py-4 px-8 text-yellow-500">In Use</th>
                             </tr>
                         </thead>
