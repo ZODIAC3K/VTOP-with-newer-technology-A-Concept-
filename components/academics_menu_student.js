@@ -79,7 +79,7 @@ export default function Academics_menu_student(){
                         }
                     }
                 }
-                <Attendance_student_table />
+                <Student_class_table/>
             </div>
         </div>
       </div>
